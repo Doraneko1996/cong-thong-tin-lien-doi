@@ -13,33 +13,50 @@
     content="Cổng thông tin Liên đội Trường Tiểu học Phạm Văn Chiêu"
   >
 
-  <title>Cổng thông tin Liên đội | Trường Tiểu học Phạm Văn Chiêu</title>
+  <title>
+    Cổng thông tin Liên đội | Trường Tiểu học Phạm Văn Chiêu
+  </title>
 
-  <!-- Giao diện Docsify -->
+  <!-- Giao diện mặc định của Docsify -->
   <link
     rel="stylesheet"
     href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+  >
+
+  <!-- Giao diện tùy chỉnh của website -->
+  <link
+    rel="stylesheet"
+    href="style.css"
   >
 </head>
 
 <body>
 
-  <div id="app">Đang tải Cổng thông tin Liên đội...</div>
+  <div id="app">
+    Đang tải Cổng thông tin Liên đội...
+  </div>
 
   <script>
     window.$docsify = {
+
+      // Tên website
       name: 'Cổng thông tin Liên đội',
 
+      // Liên kết repository GitHub
       repo: 'https://github.com/Doraneko1996/cong-thong-tin-lien-doi',
 
+      // Sử dụng file _sidebar.md làm menu
       loadSidebar: true,
 
+      // Hiển thị các mục con trong sidebar
       subMaxLevel: 2,
 
+      // Khi chuyển trang sẽ tự cuộn lên đầu
       auto2top: true,
 
+      // Cấu hình tìm kiếm
       search: {
-        placeholder: 'Tìm kiếm...',
+        placeholder: 'Tìm kiếm nội dung...',
         noData: 'Không tìm thấy nội dung.',
         depth: 3
       }
