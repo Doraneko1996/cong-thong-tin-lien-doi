@@ -50,4 +50,18 @@ Cổng thông tin được xây dựng với các mục tiêu:
 
 ---
 
-## Khám phá C
+## Khám phá Cổng thông tin
+
+Bạn có thể sử dụng **menu bên trái** để truy cập các chuyên mục hoặc sử dụng **ô tìm kiếm** để nhanh chóng tìm nội dung cần thiết.
+
+> **Lưu ý:** Cổng thông tin được xây dựng và hoàn thiện từng bước trong quá trình thực hiện đồ án Nhập môn Công nghệ thông tin.
+
+---
+
+## Thông tin dự án
+
+**Tên dự án:** Cổng thông tin Liên đội Trường Tiểu học Phạm Văn Chiêu  
+**Nền tảng:** Docsify  
+**Xuất bản:** GitHub Pages  
+**Định dạng nội dung:** Markdown  
+**Năm thực hiện:** 2026
