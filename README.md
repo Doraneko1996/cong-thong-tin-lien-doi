@@ -1,9 +1,27 @@
-# CỔNG THÔNG TIN LIÊN ĐỘI
+<div class="hero">
 
-## Trường Tiểu học Phạm Văn Chiêu
+  <div class="hero-badge">
+    CỔNG THÔNG TIN LIÊN ĐỘI
+  </div>
 
-> **Chào mừng đến với Cổng thông tin Liên đội!**  
-> Không gian thông tin và tài liệu hỗ trợ công tác Đội, phong trào thiếu nhi và các hoạt động giáo dục trong nhà trường.
+  <h1>Trường Tiểu học Phạm Văn Chiêu</h1>
+
+  <p class="hero-description">
+    Không gian thông tin, tài liệu và hoạt động phục vụ
+    công tác Đội và phong trào thiếu nhi trong nhà trường.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#/hoat-dong-phong-trao" class="btn-primary">
+      Khám phá hoạt động
+    </a>
+
+    <a href="#/cam-nang-nghiep-vu" class="btn-secondary">
+      Cẩm nang nghiệp vụ
+    </a>
+  </div>
+
+</div>
 
 ---
 
@@ -15,14 +33,47 @@ Thông qua cổng thông tin, giáo viên, học sinh và các thành viên tham
 
 ---
 
-## Các chuyên mục chính
+<h2>Các chuyên mục chính</h2>
 
-| Chuyên mục | Nội dung |
-|---|---|
-| **Giới thiệu Liên đội** | Thông tin chung và cơ cấu hoạt động của Liên đội |
-| **Hoạt động - Phong trào** | Giới thiệu các chương trình, hoạt động và phong trào tiêu biểu |
-| **Cẩm nang nghiệp vụ Đội** | Tổng hợp hướng dẫn, quy trình và tài liệu hỗ trợ công tác Đội |
-| **Liên hệ - Góp ý** | Tiếp nhận ý kiến, đề xuất và phản hồi thông qua biểu mẫu trực tuyến |
+<div class="portal-grid">
+
+  <a href="#/gioi-thieu" class="portal-card">
+    <div class="portal-icon">01</div>
+    <h3>Giới thiệu Liên đội</h3>
+    <p>
+      Thông tin chung, tổ chức và định hướng hoạt động
+      của Liên đội.
+    </p>
+  </a>
+
+  <a href="#/hoat-dong-phong-trao" class="portal-card">
+    <div class="portal-icon">02</div>
+    <h3>Hoạt động - Phong trào</h3>
+    <p>
+      Theo dõi các chương trình, phong trào và hoạt động
+      tiêu biểu của Liên đội.
+    </p>
+  </a>
+
+  <a href="#/cam-nang-nghiep-vu" class="portal-card">
+    <div class="portal-icon">03</div>
+    <h3>Cẩm nang nghiệp vụ Đội</h3>
+    <p>
+      Tra cứu hướng dẫn, quy trình và tài liệu phục vụ
+      công tác Đội.
+    </p>
+  </a>
+
+  <a href="#/lien-he-gop-y" class="portal-card">
+    <div class="portal-icon">04</div>
+    <h3>Liên hệ - Góp ý</h3>
+    <p>
+      Gửi ý kiến, đề xuất và phản hồi đến Liên đội
+      thông qua biểu mẫu trực tuyến.
+    </p>
+  </a>
+
+</div>
 
 ---
 
