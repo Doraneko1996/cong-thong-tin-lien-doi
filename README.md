@@ -44,6 +44,14 @@ Thông qua cổng thông tin, giáo viên, học sinh và các thành viên tham
 
 ---
 
+## Hoạt động Liên đội
+
+![Hoạt động Liên đội Trường Tiểu học Phạm Văn Chiêu](assets/images/hoat-dong-lien-doi.png)
+
+> Cổng thông tin từng bước cập nhật các hoạt động, phong trào và nội dung phục vụ công tác Đội trong nhà trường.
+
+---
+
 ## Mục tiêu của Cổng thông tin
 
 Cổng thông tin được xây dựng với các mục tiêu:
