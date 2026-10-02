@@ -1,291 +1,387 @@
-/* ========================================
+/* =========================================================
    CỔNG THÔNG TIN LIÊN ĐỘI
    Trường Tiểu học Phạm Văn Chiêu
-   ======================================== */
+   ========================================================= */
 
 
-/* ========================================
-   1. BIẾN MÀU SẮC
-   ======================================== */
+/* =========================================================
+   1. BIẾN GIAO DIỆN
+   ========================================================= */
 
 :root {
-  --primary-color: #1261a0;
+  /* Nhận diện */
+  --primary-color: var(--accent, #1261a0);
   --primary-dark: #0b4f8a;
-  --primary-light: #1d7ac0;
+  --primary-light: #2584c7;
 
-  --secondary-color: #e53935;
+  --secondary-color: #d9363e;
 
-  --background-color: #f5f8fc;
-  --content-background: #ffffff;
+  /* Tự thích nghi Light / Dark Mode */
+  --page-background: var(--background, #f4f7fb);
+  --surface: var(--background, #ffffff);
+  --text-main: var(--textColor, #25313c);
+  --text-muted: var(--sidebarSublink, #64748b);
+  --line-color: var(--borderColor, #e2e8f0);
 
-  --text-color: #263238;
-  --sub-text-color: #546e7a;
+  /* Hiệu ứng */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
 
-  --border-color: #e2e8f0;
+  --shadow-sm:
+    0 2px 8px rgba(15, 23, 42, 0.05);
+
+  --shadow-md:
+    0 8px 24px rgba(15, 23, 42, 0.08);
+
+  --shadow-hover:
+    0 12px 30px rgba(15, 23, 42, 0.12);
 }
 
 
-/* ========================================
+/* =========================================================
    2. TOÀN TRANG
-   ======================================== */
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
-  color: var(--text-color);
+  color: var(--text-main);
 
-  background: var(--background-color);
+  background: var(--page-background);
+
+  font-size: 16px;
+
+  line-height: 1.7;
 }
 
 
-/* ========================================
+/* =========================================================
    3. KHU VỰC NỘI DUNG
-   ======================================== */
+   ========================================================= */
 
 .content {
-  padding-top: 20px;
+  padding-top: 28px;
 }
 
 
 .markdown-section {
-  max-width: 1050px;
+  max-width: 1040px;
 
-  padding: 35px 45px;
+  margin: 0 auto 60px;
 
-  background: var(--content-background);
+  padding: 38px 48px;
 
-  border-radius: 14px;
+  background: var(--surface);
+
+  border:
+    1px solid var(--line-color);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
 }
 
 
-/* ========================================
+/* =========================================================
    4. TIÊU ĐỀ
-   ======================================== */
+   ========================================================= */
 
 .markdown-section h1 {
+  margin-top: 0;
+
+  margin-bottom: 28px;
+
+  padding-bottom: 14px;
+
+  border-bottom:
+    2px solid var(--line-color);
+
   color: var(--primary-color);
 
   font-size: 32px;
 
-  font-weight: 700;
+  font-weight: 750;
 
-  border-bottom: 3px solid var(--secondary-color);
+  line-height: 1.3;
+}
 
-  padding-bottom: 12px;
+
+.markdown-section h1::after {
+  content: "";
+
+  display: block;
+
+  width: 72px;
+
+  height: 3px;
+
+  margin-top: 12px;
+
+  border-radius: 99px;
+
+  background: var(--secondary-color);
 }
 
 
 .markdown-section h2 {
+  margin-top: 42px;
+
+  margin-bottom: 18px;
+
   color: var(--primary-color);
 
-  margin-top: 35px;
+  font-size: 24px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+.markdown-section h3 {
+  margin-top: 30px;
+
+  margin-bottom: 12px;
+
+  color: var(--text-main);
+
+  font-size: 19px;
 
   font-weight: 700;
 }
 
 
-.markdown-section h3 {
-  color: #37474f;
-
-  font-weight: 600;
+.markdown-section p {
+  margin:
+    0 0 16px;
 }
 
 
-/* ========================================
+/* =========================================================
    5. SIDEBAR
-   ======================================== */
+   ========================================================= */
 
 .sidebar {
-  background: #ffffff;
+  background: var(--surface);
 
-  border-right: 1px solid var(--border-color);
+  border-right:
+    1px solid var(--line-color);
+}
+
+
+.sidebar > h1 {
+  margin:
+    28px 20px 18px;
+
+  text-align: left;
+}
+
+
+.app-name-link {
+  color:
+    var(--primary-color) !important;
+
+  font-size: 20px;
+
+  font-weight: 750;
+
+  line-height: 1.35;
+
+  text-decoration: none !important;
 }
 
 
 .sidebar-nav {
-  padding: 10px;
+  padding:
+    5px 14px 30px;
+}
+
+
+.sidebar-nav ul {
+  padding-left: 0;
+}
+
+
+.sidebar-nav li {
+  margin: 4px 0;
 }
 
 
 .sidebar-nav li a {
   display: block;
 
-  color: #37474f;
+  padding:
+    9px 12px;
+
+  border-radius:
+    var(--radius-sm);
+
+  color:
+    var(--text-main);
+
+  font-size: 14px;
 
   font-weight: 500;
 
-  padding: 8px 12px;
+  line-height: 1.45;
 
-  border-radius: 8px;
+  text-decoration: none;
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
 }
 
 
 .sidebar-nav li a:hover {
-  color: var(--primary-color);
+  color:
+    var(--primary-color);
 
-  background: #eef6fc;
+  background:
+    color-mix(
+      in srgb,
+      var(--primary-color) 9%,
+      transparent
+    );
+
+  transform:
+    translateX(2px);
 }
 
 
 .sidebar-nav li.active > a {
-  color: var(--primary-color);
+  color:
+    var(--primary-color);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--primary-color) 11%,
+      transparent
+    );
 
   font-weight: 700;
 
-  background: #eef6fc;
+  box-shadow:
+    inset 3px 0 0 var(--primary-color);
 }
 
 
-/* ========================================
-   6. TÊN WEBSITE
-   ======================================== */
+/* =========================================================
+   6. Ô TÌM KIẾM
+   ========================================================= */
 
-.app-name-link {
-  color: var(--primary-color) !important;
+.search {
+  padding:
+    0 14px 12px !important;
 
-  font-weight: 700;
+  border-bottom:
+    1px solid var(--line-color) !important;
 }
 
 
-/* ========================================
-   7. Ô TÌM KIẾM
-   ======================================== */
+.search .input-wrap {
+  margin-top:
+    6px !important;
+}
+
 
 .search input {
-  border-radius: 8px !important;
+  width: 100% !important;
 
-  border: 1px solid var(--border-color) !important;
+  padding:
+    10px 12px !important;
 
-  padding: 10px 12px !important;
+  border:
+    1px solid var(--line-color) !important;
+
+  border-radius:
+    10px !important;
+
+  background:
+    var(--surface) !important;
+
+  color:
+    var(--text-main) !important;
+
+  font-family: inherit;
+
+  font-size: 14px;
 }
 
 
-/* ========================================
-   8. CALLOUT / GHI CHÚ
-   ======================================== */
+.search input:focus {
+  border-color:
+    var(--primary-color) !important;
 
-.markdown-section blockquote {
-  border-left: 5px solid var(--secondary-color);
+  box-shadow:
+    0 0 0 3px
+    color-mix(
+      in srgb,
+      var(--primary-color) 12%,
+      transparent
+    );
 
-  background: #fff8f8;
-
-  padding: 15px 20px;
-
-  border-radius: 6px;
-
-  color: var(--text-color);
+  outline: none;
 }
 
 
-.markdown-section blockquote p {
-  margin: 0;
-}
-
-
-/* ========================================
-   9. BẢNG
-   ======================================== */
-
-.markdown-section table {
-  display: table;
-
-  width: 100%;
-
-  border-collapse: collapse;
-
-  margin: 20px 0;
-}
-
-
-.markdown-section th {
-  background: var(--primary-color);
-
-  color: #ffffff;
-
-  font-weight: 600;
-}
-
-
-.markdown-section th,
-.markdown-section td {
-  padding: 12px 15px;
-
-  border: 1px solid var(--border-color);
-
-  text-align: left;
-}
-
-
-/* ========================================
-   10. HÌNH ẢNH
-   ======================================== */
-
-.markdown-section img {
-  max-width: 100%;
-
-  height: auto;
-
-  border-radius: 10px;
-}
-
-
-/* ========================================
-   11. LIÊN KẾT
-   ======================================== */
-
-.markdown-section a {
-  color: var(--primary-color);
-
-  font-weight: 500;
-}
-
-
-/* ========================================
-   12. HERO TRANG CHỦ
-   ======================================== */
+/* =========================================================
+   7. HERO TRANG CHỦ
+   ========================================================= */
 
 .hero {
   position: relative;
 
   overflow: hidden;
 
-  margin: 10px 0 45px;
+  margin:
+    0 0 42px;
 
-  padding: 55px;
+  padding:
+    48px 50px;
 
-  border-radius: 22px;
+  border-radius:
+    22px;
 
   background:
     linear-gradient(
       135deg,
-      var(--primary-dark) 0%,
-      var(--primary-color) 55%,
-      var(--primary-light) 100%
+      #0b4f8a 0%,
+      #1261a0 55%,
+      #247fbd 100%
     );
 
   color: #ffffff;
 
   box-shadow:
-    0 15px 40px rgba(18, 97, 160, 0.18);
+    0 16px 36px
+    rgba(11, 79, 138, 0.18);
 }
 
-
-/* Họa tiết tròn phía trên */
 
 .hero::before {
   content: "";
 
   position: absolute;
 
-  width: 260px;
-  height: 260px;
+  top: -120px;
 
-  right: -80px;
-  top: -100px;
+  right: -75px;
+
+  width: 280px;
+
+  height: 280px;
 
   border-radius: 50%;
 
@@ -294,67 +390,70 @@ body {
 }
 
 
-/* Họa tiết tròn phía dưới */
-
 .hero::after {
   content: "";
 
   position: absolute;
 
-  width: 180px;
-  height: 180px;
+  right: 120px;
 
-  right: 70px;
-  bottom: -120px;
+  bottom: -135px;
+
+  width: 210px;
+
+  height: 210px;
 
   border-radius: 50%;
 
   background:
-    rgba(229, 57, 53, 0.22);
+    rgba(217, 54, 62, 0.22);
 }
 
 
-/* ========================================
-   13. NHÃN HERO
-   ======================================== */
-
 .hero-badge {
-  display: inline-block;
-
   position: relative;
 
   z-index: 2;
 
+  display: inline-flex;
+
+  align-items: center;
+
   margin-bottom: 18px;
 
-  padding: 7px 14px;
-
-  border-radius: 30px;
-
-  background:
-    rgba(255, 255, 255, 0.16);
+  padding:
+    6px 13px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.25);
+    1px solid
+    rgba(255, 255, 255, 0.3);
 
-  color: #ffffff;
+  border-radius:
+    999px;
 
-  font-size: 13px;
+  background:
+    rgba(255, 255, 255, 0.12);
 
-  font-weight: 700;
+  color:
+    #ffffff;
 
-  letter-spacing: 1.2px;
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.1px;
 }
 
-
-/* ========================================
-   14. TIÊU ĐỀ TRONG HERO
-   ======================================== */
 
 .markdown-section .hero h1 {
   position: relative;
 
   z-index: 2;
+
+  max-width: 760px;
 
   margin: 0;
 
@@ -364,39 +463,46 @@ body {
 
   color: #ffffff;
 
-  font-size: 40px;
+  font-size:
+    clamp(30px, 4vw, 42px);
 
-  line-height: 1.25;
+  font-weight:
+    750;
+
+  line-height:
+    1.2;
 }
 
 
-/* ========================================
-   15. MÔ TẢ HERO
-   ======================================== */
+.markdown-section .hero h1::after {
+  display: none;
+}
+
 
 .hero-description {
   position: relative;
 
   z-index: 2;
 
-  max-width: 700px;
+  max-width: 690px;
 
-  margin-top: 18px;
-
-  margin-bottom: 28px;
+  margin:
+    18px 0 28px;
 
   color:
-    rgba(255, 255, 255, 0.92);
+    rgba(255, 255, 255, 0.9);
 
-  font-size: 18px;
+  font-size:
+    17px;
 
-  line-height: 1.7;
+  line-height:
+    1.65;
 }
 
 
-/* ========================================
-   16. NHÓM NÚT HERO
-   ======================================== */
+/* =========================================================
+   8. NÚT HERO
+   ========================================================= */
 
 .hero-buttons {
   position: relative;
@@ -414,13 +520,10 @@ body {
 
 
 .hero-buttons a {
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
-
-/* ========================================
-   17. NÚT HERO
-   ======================================== */
 
 .btn-primary,
 .btn-secondary {
@@ -432,63 +535,76 @@ body {
 
   min-height: 42px;
 
-  padding: 0 20px;
+  padding:
+    0 19px;
 
-  border-radius: 9px;
+  border-radius:
+    9px;
 
-  font-weight: 600;
+  font-size:
+    14px;
 
-  line-height: 1;
+  font-weight:
+    650;
+
+  line-height:
+    1;
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
 }
 
 
-/* Nút chính */
-
 .btn-primary {
-  background: #ffffff;
+  background:
+    #ffffff;
 
   color:
-    var(--primary-color) !important;
+    #0b5e9d !important;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0, 0, 0, 0.08);
 }
 
 
 .btn-primary:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.15);
+    0 8px 18px
+    rgba(0, 0, 0, 0.14);
 }
 
 
-/* Nút phụ */
-
 .btn-secondary {
-  background:
-    rgba(255, 255, 255, 0.12);
-
-  color: #ffffff !important;
-
   border:
-    1px solid rgba(255, 255, 255, 0.45);
+    1px solid
+    rgba(255, 255, 255, 0.42);
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  color:
+    #ffffff !important;
 }
 
 
 .btn-secondary:hover {
   background:
-    rgba(255, 255, 255, 0.2);
+    rgba(255, 255, 255, 0.18);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 
-/* ========================================
-   18. LƯỚI CHUYÊN MỤC
-   ======================================== */
+/* =========================================================
+   9. CARD CHUYÊN MỤC
+   ========================================================= */
 
 .portal-grid {
   display: grid;
@@ -496,90 +612,59 @@ body {
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 20px;
+  gap: 18px;
 
-  margin: 25px 0 40px;
+  margin:
+    24px 0 42px;
 }
 
-
-/* ========================================
-   19. CARD CHUYÊN MỤC
-   ======================================== */
 
 .portal-card {
   display: block;
 
-  padding: 25px;
+  padding:
+    24px;
 
   border:
-    1px solid var(--border-color);
+    1px solid var(--line-color);
 
-  border-radius: 16px;
+  border-radius:
+    var(--radius-md);
 
-  background: #ffffff;
+  background:
+    var(--surface);
 
   color:
-    var(--text-color) !important;
+    var(--text-main) !important;
 
   text-decoration:
     none !important;
 
   box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.04);
+    var(--shadow-sm);
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
 }
 
 
 .portal-card:hover {
   transform:
-    translateY(-4px);
+    translateY(-3px);
 
   border-color:
-    rgba(18, 97, 160, 0.35);
+    color-mix(
+      in srgb,
+      var(--primary-color) 35%,
+      var(--line-color)
+    );
 
   box-shadow:
-    0 12px 30px rgba(18, 97, 160, 0.12);
+    var(--shadow-md);
 }
 
-
-/* ========================================
-   20. TIÊU ĐỀ CARD
-   ======================================== */
-
-.portal-card h3 {
-  margin:
-    15px 0 8px;
-
-  color:
-    var(--primary-color);
-
-  font-size: 19px;
-
-  font-weight: 700;
-}
-
-
-/* ========================================
-   21. MÔ TẢ CARD
-   ======================================== */
-
-.portal-card p {
-  margin: 0;
-
-  color:
-    var(--sub-text-color);
-
-  line-height: 1.65;
-}
-
-
-/* ========================================
-   22. ICON SỐ CARD
-   ======================================== */
 
 .portal-icon {
   display: flex;
@@ -588,76 +673,371 @@ body {
 
   justify-content: center;
 
-  width: 45px;
+  width: 42px;
 
-  height: 45px;
+  height: 42px;
 
-  border-radius: 12px;
+  border-radius:
+    10px;
 
   background:
-    #eef6fc;
+    color-mix(
+      in srgb,
+      var(--primary-color) 10%,
+      transparent
+    );
 
   color:
     var(--primary-color);
 
-  font-size: 14px;
+  font-size:
+    13px;
 
-  font-weight: 700;
+  font-weight:
+    750;
 }
 
 
-/* ========================================
-   23. ĐƯỜNG KẺ
-   ======================================== */
+.portal-card h3 {
+  margin:
+    16px 0 8px;
 
-.markdown-section hr {
-  height: 1px;
+  color:
+    var(--primary-color);
 
-  margin: 35px 0;
+  font-size:
+    18px;
+
+  font-weight:
+    700;
+}
+
+
+.portal-card p {
+  margin: 0;
+
+  color:
+    var(--text-muted);
+
+  font-size:
+    14.5px;
+
+  line-height:
+    1.65;
+}
+
+
+/* =========================================================
+   10. CALLOUT
+   ========================================================= */
+
+.markdown-section blockquote {
+  margin:
+    24px 0;
+
+  padding:
+    16px 18px;
+
+  border-left:
+    4px solid var(--secondary-color);
+
+  border-radius:
+    0 var(--radius-sm)
+    var(--radius-sm) 0;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--secondary-color) 7%,
+      var(--surface)
+    );
+
+  color:
+    var(--text-main);
+}
+
+
+.markdown-section blockquote p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   11. BẢNG
+   ========================================================= */
+
+.markdown-section table {
+  display: table;
+
+  width: 100%;
+
+  margin:
+    22px 0 30px;
+
+  overflow: hidden;
+
+  border-collapse:
+    separate;
+
+  border-spacing: 0;
+
+  border:
+    1px solid var(--line-color);
+
+  border-radius:
+    10px;
+}
+
+
+.markdown-section th {
+  padding:
+    12px 15px;
 
   border: none;
 
-  background: var(--border-color);
+  border-bottom:
+    1px solid var(--line-color);
+
+  background:
+    var(--primary-color);
+
+  color:
+    #ffffff;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+
+  text-align:
+    left;
 }
 
 
-/* ========================================
-   24. HIỆU ỨNG CHUNG
-   ======================================== */
+.markdown-section td {
+  padding:
+    12px 15px;
 
-a {
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
+  border: none;
+
+  border-bottom:
+    1px solid var(--line-color);
+
+  color:
+    var(--text-main);
+
+  vertical-align:
+    top;
 }
 
 
-/* ========================================
-   25. RESPONSIVE TABLET
-   ======================================== */
+.markdown-section tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   12. DANH SÁCH
+   ========================================================= */
+
+.markdown-section ul,
+.markdown-section ol {
+  padding-left:
+    24px;
+}
+
+
+.markdown-section li {
+  margin:
+    5px 0;
+
+  line-height:
+    1.65;
+}
+
+
+.markdown-section li::marker {
+  color:
+    var(--primary-color);
+}
+
+
+/* =========================================================
+   13. HÌNH ẢNH
+   ========================================================= */
+
+.markdown-section img {
+  display: block;
+
+  max-width:
+    100%;
+
+  height:
+    auto;
+
+  margin:
+    22px auto;
+
+  border:
+    1px solid var(--line-color);
+
+  border-radius:
+    14px;
+
+  box-shadow:
+    var(--shadow-md);
+}
+
+
+/* =========================================================
+   14. LINK
+   ========================================================= */
+
+.markdown-section a {
+  color:
+    var(--primary-color);
+
+  font-weight:
+    600;
+
+  text-decoration-thickness:
+    1px;
+
+  text-underline-offset:
+    3px;
+}
+
+
+/* =========================================================
+   15. CODE
+   ========================================================= */
+
+.markdown-section pre {
+  margin:
+    22px 0;
+
+  border:
+    1px solid var(--line-color);
+
+  border-radius:
+    10px;
+
+  box-shadow:
+    var(--shadow-sm);
+}
+
+
+.markdown-section code {
+  border-radius:
+    5px;
+}
+
+
+/* =========================================================
+   16. ĐƯỜNG KẺ
+   ========================================================= */
+
+.markdown-section hr {
+  height:
+    1px;
+
+  margin:
+    38px 0;
+
+  border:
+    none;
+
+  background:
+    var(--line-color);
+}
+
+
+/* =========================================================
+   17. DARK / LIGHT BUTTON
+   ========================================================= */
+
+#docsify-darklight-theme {
+  position: fixed !important;
+
+  top: 18px !important;
+
+  right: 20px !important;
+
+  width: 38px !important;
+
+  height: 38px !important;
+
+  padding: 8px !important;
+
+  border:
+    1px solid var(--line-color) !important;
+
+  border-radius:
+    10px !important;
+
+  background-color:
+    var(--surface) !important;
+
+  background-size:
+    20px 20px !important;
+
+  background-position:
+    center !important;
+
+  box-shadow:
+    var(--shadow-sm);
+
+  z-index:
+    100;
+}
+
+
+/* =========================================================
+   18. SCROLLBAR SIDEBAR
+   ========================================================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius:
+    999px;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--text-muted) 35%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   19. RESPONSIVE TABLET
+   ========================================================= */
 
 @media screen and (max-width: 900px) {
 
   .markdown-section {
-    padding: 30px;
+    padding:
+      32px;
   }
 
 
   .hero {
-    padding: 45px 35px;
-  }
-
-
-  .markdown-section .hero h1 {
-    font-size: 34px;
+    padding:
+      42px 34px;
   }
 
 }
 
 
-/* ========================================
-   26. RESPONSIVE ĐIỆN THOẠI
-   ======================================== */
+/* =========================================================
+   20. RESPONSIVE ĐIỆN THOẠI
+   ========================================================= */
 
 @media screen and (max-width: 768px) {
 
@@ -667,128 +1047,154 @@ a {
 
 
   .markdown-section {
-    padding: 20px;
+    margin-bottom: 30px;
 
-    border-radius: 0;
+    padding:
+      22px 18px;
+
+    border:
+      none;
+
+    border-radius:
+      0;
+
+    box-shadow:
+      none;
   }
 
 
   .markdown-section h1 {
-    font-size: 25px;
+    font-size:
+      26px;
   }
 
 
   .markdown-section h2 {
-    font-size: 21px;
+    margin-top:
+      34px;
+
+    font-size:
+      21px;
   }
 
-
-  /* Hero */
 
   .hero {
     margin-top: 0;
 
     margin-bottom: 30px;
 
-    padding: 35px 25px;
+    padding:
+      34px 24px;
 
-    border-radius: 14px;
+    border-radius:
+      14px;
   }
 
 
   .markdown-section .hero h1 {
-    font-size: 29px;
-
-    line-height: 1.3;
+    font-size:
+      29px;
   }
 
 
   .hero-description {
-    font-size: 16px;
-
-    line-height: 1.6;
+    font-size:
+      15.5px;
   }
 
 
-  /* Nút */
-
   .hero-buttons {
-    flex-direction: column;
+    flex-direction:
+      column;
 
-    align-items: stretch;
+    align-items:
+      stretch;
   }
 
 
   .hero-buttons a {
-    width: auto;
-
-    text-align: center;
+    text-align:
+      center;
   }
 
-
-  .btn-primary,
-  .btn-secondary {
-    min-height: 44px;
-  }
-
-
-  /* Card */
 
   .portal-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
 
-    gap: 15px;
+    gap:
+      14px;
   }
 
 
   .portal-card {
-    padding: 20px;
+    padding:
+      20px;
   }
 
 
-  /* Bảng */
-
   .markdown-section table {
-    display: block;
+    display:
+      block;
 
-    overflow-x: auto;
+    overflow-x:
+      auto;
 
-    white-space: nowrap;
+    white-space:
+      nowrap;
+  }
+
+
+  #docsify-darklight-theme {
+    top:
+      12px !important;
+
+    right:
+      12px !important;
+
+    width:
+      36px !important;
+
+    height:
+      36px !important;
   }
 
 }
 
 
-/* ========================================
-   27. MÀN HÌNH RẤT NHỎ
-   ======================================== */
+/* =========================================================
+   21. MÀN HÌNH NHỎ
+   ========================================================= */
 
 @media screen and (max-width: 480px) {
 
   .markdown-section {
-    padding: 16px;
+    padding:
+      18px 15px;
   }
 
 
   .hero {
-    padding: 30px 20px;
+    padding:
+      30px 20px;
   }
 
 
   .markdown-section .hero h1 {
-    font-size: 25px;
+    font-size:
+      25px;
   }
 
 
   .hero-badge {
-    font-size: 11px;
-
-    letter-spacing: 0.8px;
+    font-size:
+      11px;
   }
 
 
   .portal-card h3 {
-    font-size: 18px;
+    font-size:
+      17px;
   }
 
 }
