@@ -4,7 +4,7 @@
 
    Giao diện:
    - Hiện đại
-   - Đơn giản
+   - Tối giản
    - Responsive
    - Hỗ trợ Light / Dark Mode
    ========================================================= */
@@ -22,7 +22,7 @@
 
   --secondary-color: #d9363e;
 
-  /* Màu tự thay đổi theo Dark / Light Mode */
+  /* Tự đổi theo Light / Dark Mode */
   --page-background: var(--background, #f5f7fb);
   --surface: var(--background, #ffffff);
 
@@ -201,9 +201,11 @@ body {
    ========================================================= */
 
 .sidebar {
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
   background:
     var(--surface);
@@ -222,7 +224,8 @@ body {
    ========================================================= */
 
 .sidebar > h1 {
-  order: 1;
+  order:
+    1;
 
   margin:
     68px 20px 16px;
@@ -233,12 +236,14 @@ body {
   border-bottom:
     1px solid var(--line-color);
 
-  text-align: left;
+  text-align:
+    left;
 }
 
 
 .app-name-link {
-  display: block;
+  display:
+    block;
 
   color:
     var(--primary-color) !important;
@@ -262,7 +267,8 @@ body {
    ========================================================= */
 
 .sidebar .search {
-  order: 2;
+  order:
+    2;
 }
 
 
@@ -346,34 +352,39 @@ body {
    ========================================================= */
 
 .sidebar-nav {
-  order: 3;
+  order:
+    3;
 
-  flex: 1;
+  flex:
+    1;
 
   padding:
-    14px 16px 40px;
+    16px 14px 36px;
 }
 
 
 .sidebar-nav ul {
-  margin: 0;
+  margin:
+    0;
 
-  padding: 0;
+  padding:
+    0;
 }
 
 
 .sidebar-nav li {
   margin:
-    4px 0;
+    6px 0;
 
-  padding: 0;
+  padding:
+    0;
 
   list-style:
     none;
 }
 
 
-/* Loại bỏ dấu - do Darklight Theme tạo */
+/* Bỏ dấu - mặc định */
 
 .sidebar-nav li::before,
 .app-sub-sidebar li::before {
@@ -385,7 +396,12 @@ body {
 }
 
 
+/* Nút menu */
+
 .sidebar-nav li a {
+  position:
+    relative;
+
   display:
     flex;
 
@@ -393,35 +409,83 @@ body {
     center;
 
   min-height:
-    43px;
+    44px;
 
   padding:
-    0 14px;
+    0 14px 0 18px;
+
+  border:
+    1px solid transparent;
 
   border-radius:
-    9px;
+    10px;
+
+  background:
+    transparent;
 
   color:
     var(--text-main);
 
   font-size:
-    14px;
+    15px;
 
   font-weight:
     500;
 
   line-height:
-    1.45;
+    1.4;
 
   text-decoration:
     none;
 
   transition:
     background 0.18s ease,
+    border-color 0.18s ease,
     color 0.18s ease,
-    transform 0.18s ease;
+    box-shadow 0.18s ease;
 }
 
+
+/* Vạch trạng thái bên trái */
+
+.sidebar-nav li a::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    8px;
+
+  top:
+    50%;
+
+  width:
+    3px;
+
+  height:
+    18px;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--primary-color);
+
+  transform:
+    translateY(-50%) scaleY(0);
+
+  opacity:
+    0;
+
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+
+/* Hover */
 
 .sidebar-nav li a:hover {
   color:
@@ -430,14 +494,20 @@ body {
   background:
     color-mix(
       in srgb,
-      var(--primary-color) 8%,
+      var(--primary-color) 7%,
       transparent
     );
 
-  transform:
-    translateX(2px);
+  border-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 18%,
+      transparent
+    );
 }
 
+
+/* Trang đang mở */
 
 .sidebar-nav li.active > a {
   color:
@@ -446,7 +516,14 @@ body {
   background:
     color-mix(
       in srgb,
-      var(--primary-color) 11%,
+      var(--primary-color) 10%,
+      transparent
+    );
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 24%,
       transparent
     );
 
@@ -454,8 +531,17 @@ body {
     700;
 
   box-shadow:
-    inset 3px 0 0
-    var(--primary-color);
+    0 4px 14px
+    rgba(18, 97, 160, 0.07);
+}
+
+
+.sidebar-nav li.active > a::before {
+  transform:
+    translateY(-50%) scaleY(1);
+
+  opacity:
+    1;
 }
 
 
@@ -597,7 +683,8 @@ body {
 /* Họa tiết Hero */
 
 .hero::before {
-  content: "";
+  content:
+    "";
 
   position:
     absolute;
@@ -623,7 +710,8 @@ body {
 
 
 .hero::after {
-  content: "";
+  content:
+    "";
 
   position:
     absolute;
@@ -833,8 +921,6 @@ body {
 }
 
 
-/* Nút chính */
-
 .btn-primary {
   background:
     #ffffff;
@@ -857,8 +943,6 @@ body {
     rgba(0, 0, 0, 0.14);
 }
 
-
-/* Nút phụ */
 
 .btn-secondary {
   border:
@@ -883,7 +967,7 @@ body {
 
 
 /* =========================================================
-   15. LƯỚI CARD CHUYÊN MỤC
+   15. LƯỚI CARD
    ========================================================= */
 
 .portal-grid {
@@ -1148,8 +1232,6 @@ body {
 }
 
 
-/* Dòng xen kẽ nhẹ */
-
 .markdown-section tbody tr:nth-child(even) {
   background:
     color-mix(
@@ -1278,7 +1360,7 @@ body {
 
 
 /* =========================================================
-   25. NÚT DARK / LIGHT MODE
+   25. NÚT DARK / LIGHT MODE - FLOAT
    ========================================================= */
 
 #docsify-darklight-theme {
@@ -1286,25 +1368,28 @@ body {
     fixed !important;
 
   top:
-    15px !important;
+    auto !important;
 
   right:
-    82px !important;
+    22px !important;
+
+  bottom:
+    22px !important;
 
   width:
-    40px !important;
+    50px !important;
 
   height:
-    40px !important;
+    50px !important;
 
   padding:
-    9px !important;
+    10px !important;
 
   border:
     1px solid var(--line-color) !important;
 
   border-radius:
-    10px !important;
+    50% !important;
 
   background-color:
     var(--surface) !important;
@@ -1316,11 +1401,11 @@ body {
     center !important;
 
   background-size:
-    20px 20px !important;
+    22px 22px !important;
 
   box-shadow:
-    0 3px 12px
-    rgba(15, 23, 42, 0.08);
+    0 12px 28px
+    rgba(15, 23, 42, 0.18);
 
   cursor:
     pointer;
@@ -1330,17 +1415,18 @@ body {
 
   transition:
     transform 0.18s ease,
-    box-shadow 0.18s ease;
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
 }
 
 
 #docsify-darklight-theme:hover {
   transform:
-    translateY(-1px);
+    translateY(-2px);
 
   box-shadow:
-    0 6px 16px
-    rgba(15, 23, 42, 0.13);
+    0 16px 32px
+    rgba(15, 23, 42, 0.22);
 }
 
 
@@ -1516,7 +1602,7 @@ body {
   }
 
 
-  /* Hero button */
+  /* Hero buttons */
 
   .hero-buttons {
     flex-direction:
@@ -1581,20 +1667,26 @@ body {
   }
 
 
-  /* Dark mode */
+  /* Dark mode float */
 
   #docsify-darklight-theme {
     top:
-      12px !important;
+      auto !important;
 
     right:
-      68px !important;
+      16px !important;
+
+    bottom:
+      16px !important;
 
     width:
-      38px !important;
+      46px !important;
 
     height:
-      38px !important;
+      46px !important;
+
+    background-size:
+      20px 20px !important;
   }
 
 
@@ -1656,6 +1748,24 @@ body {
   .sidebar-nav li a {
     min-height:
       42px;
+
+    font-size:
+      14px;
+  }
+
+
+  #docsify-darklight-theme {
+    right:
+      14px !important;
+
+    bottom:
+      14px !important;
+
+    width:
+      44px !important;
+
+    height:
+      44px !important;
   }
 
 }
