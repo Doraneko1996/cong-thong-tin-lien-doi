@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -17,18 +19,31 @@
     Cổng thông tin Liên đội | Trường Tiểu học Phạm Văn Chiêu
   </title>
 
+
   <!-- Giao diện mặc định của Docsify -->
   <link
     rel="stylesheet"
     href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
   >
 
+
+  <!-- Plugin giao diện sáng / tối -->
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+    title="docsify-darklight-theme"
+    type="text/css"
+  >
+
+
   <!-- Giao diện tùy chỉnh của website -->
   <link
     rel="stylesheet"
     href="style.css"
   >
+
 </head>
+
 
 <body>
 
@@ -36,41 +51,178 @@
     Đang tải Cổng thông tin Liên đội...
   </div>
 
+
   <script>
+
     window.$docsify = {
 
-      // Tên website
+      // =====================================
+      // THÔNG TIN WEBSITE
+      // =====================================
+
       name: 'Cổng thông tin Liên đội',
 
-      // Liên kết repository GitHub
       repo: 'https://github.com/Doraneko1996/cong-thong-tin-lien-doi',
 
-      // Sử dụng file _sidebar.md làm menu
+
+      // =====================================
+      // MENU
+      // =====================================
+
       loadSidebar: true,
 
-      // Hiển thị các mục con trong sidebar
       subMaxLevel: 2,
 
-      // Khi chuyển trang sẽ tự cuộn lên đầu
       auto2top: true,
 
-      // Cấu hình tìm kiếm
+
+      // =====================================
+      // TÌM KIẾM
+      // =====================================
+
       search: {
+
         placeholder: 'Tìm kiếm nội dung...',
+
         noData: 'Không tìm thấy nội dung.',
+
         depth: 3
+
+      },
+
+
+      // =====================================
+      // DARK / LIGHT MODE
+      // =====================================
+
+      darklightTheme: {
+
+        siteFont: 'Segoe UI, Arial, sans-serif',
+
+        defaultTheme: 'light',
+
+        codeFontFamily:
+          'Consolas, Monaco, Courier New, monospace',
+
+        bodyFontSize: '16px',
+
+
+        // -----------------------------
+        // DARK MODE
+        // -----------------------------
+
+        dark: {
+
+          accent: '#4da3e6',
+
+          toogleBackground: '#ffffff',
+
+          background: '#0f172a',
+
+          textColor: '#e5e7eb',
+
+          codeTextColor: '#f8fafc',
+
+          codeBackgroundColor: '#111827',
+
+          borderColor: '#334155',
+
+          blockQuoteColor: '#cbd5e1',
+
+          highlightColor: '#60a5fa',
+
+          sidebarSublink: '#cbd5e1',
+
+          codeTypeColor: '#e5e7eb',
+
+          coverBackground:
+            'linear-gradient(135deg, #0b2742 0%, #1261a0 100%)',
+
+          toogleImage:
+            'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+
+        },
+
+
+        // -----------------------------
+        // LIGHT MODE
+        // -----------------------------
+
+        light: {
+
+          accent: '#1261a0',
+
+          toogleBackground: '#0f172a',
+
+          background: '#ffffff',
+
+          textColor: '#263238',
+
+          codeTextColor: '#374151',
+
+          codeBackgroundColor: '#f5f7fa',
+
+          borderColor: '#e2e8f0',
+
+          blockQuoteColor: '#546e7a',
+
+          highlightColor: '#1261a0',
+
+          sidebarSublink: '#546e7a',
+
+          codeTypeColor: '#263238',
+
+          coverBackground:
+            'linear-gradient(135deg, #eef6fc 0%, #ffffff 100%)',
+
+          toogleImage:
+            'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+
+        }
+
       }
-    }
+
+    };
+
   </script>
 
-  <!-- Docsify -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
-  <!-- Plugin tìm kiếm -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- =====================================
+       DOCSIFY
+       ===================================== -->
 
-  <!-- Plugin sao chép nhanh nội dung khối mã -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script
+    src="//cdn.jsdelivr.net/npm/docsify@4">
+  </script>
+
+
+  <!-- =====================================
+       PLUGIN TÌM KIẾM
+       ===================================== -->
+
+  <script
+    src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js">
+  </script>
+
+
+  <!-- =====================================
+       PLUGIN COPY CODE
+       ===================================== -->
+
+  <script
+    src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js">
+  </script>
+
+
+  <!-- =====================================
+       PLUGIN DARK / LIGHT MODE
+       ===================================== -->
+
+  <script
+    src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"
+    type="text/javascript">
+  </script>
 
 </body>
+
 </html>
