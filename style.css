@@ -2,12 +2,10 @@
    CỔNG THÔNG TIN LIÊN ĐỘI
    Trường Tiểu học Phạm Văn Chiêu
 
-   Phong cách:
    - Hiện đại
    - Tối giản
-   - Dễ đọc
    - Responsive
-   - Hỗ trợ Light / Dark Mode
+   - Light / Dark Mode
    ========================================================= */
 
 
@@ -70,7 +68,6 @@ body {
     sans-serif;
 
   font-size: 16px;
-
   line-height: 1.7;
 
   color:
@@ -84,14 +81,6 @@ body {
 /* =========================================================
    3. MAIN CONTENT
    ========================================================= */
-
-/*
-   docsify-darklight-theme mặc định có bottom: 0
-   cho .content.
-
-   bottom: auto giúp chiều cao trang chạy theo nội dung
-   và tạo khoảng trống thực sự ở cuối trang.
-*/
 
 .content {
   bottom:
@@ -166,8 +155,7 @@ body {
 .markdown-section h1::after {
   content: "";
 
-  display:
-    block;
+  display: block;
 
   width:
     70px;
@@ -233,8 +221,7 @@ body {
    ========================================================= */
 
 .sidebar {
-  display:
-    flex;
+  display: flex;
 
   flex-direction:
     column;
@@ -256,8 +243,7 @@ body {
    ========================================================= */
 
 .sidebar > h1 {
-  order:
-    1;
+  order: 1;
 
   margin:
     68px 20px 16px;
@@ -304,8 +290,7 @@ body {
    ========================================================= */
 
 .sidebar .search {
-  order:
-    2;
+  order: 2;
 }
 
 
@@ -357,9 +342,6 @@ body {
   font-size:
     14px !important;
 
-  font-weight:
-    400;
-
   transition:
     border-color 0.18s ease,
     box-shadow 0.18s ease;
@@ -397,11 +379,9 @@ body {
    ========================================================= */
 
 .sidebar-nav {
-  order:
-    3;
+  order: 3;
 
-  flex:
-    1;
+  flex: 1;
 
   padding:
     16px 14px 40px;
@@ -428,8 +408,6 @@ body {
     none !important;
 }
 
-
-/* Bỏ ký hiệu mặc định của theme */
 
 .sidebar .sidebar-nav li::before,
 .sidebar .sidebar-nav .app-sub-sidebar li::before {
@@ -750,7 +728,7 @@ body {
     0 0 42px;
 
   padding:
-    48px 50px;
+    44px 46px;
 
   border-radius:
     22px;
@@ -771,8 +749,6 @@ body {
     rgba(11, 79, 138, 0.18);
 }
 
-
-/* Trang trí Hero */
 
 .hero::before {
   content: "";
@@ -827,7 +803,38 @@ body {
 
 
 /* =========================================================
-   12. HERO BADGE
+   12. HERO BỐ CỤC
+   ========================================================= */
+
+.hero-inner {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) auto;
+
+  align-items:
+    center;
+
+  gap:
+    46px;
+}
+
+
+.hero-copy {
+  min-width:
+    0;
+}
+
+
+/* =========================================================
+   13. HERO BADGE
    ========================================================= */
 
 .hero-badge {
@@ -874,7 +881,7 @@ body {
 
 
 /* =========================================================
-   13. HERO TITLE
+   14. HERO TITLE
    ========================================================= */
 
 .markdown-section .hero h1 {
@@ -885,7 +892,7 @@ body {
     2;
 
   max-width:
-    760px;
+    720px;
 
   margin:
     0;
@@ -917,7 +924,7 @@ body {
 
 
 /* =========================================================
-   14. HERO DESCRIPTION
+   15. HERO DESCRIPTION
    ========================================================= */
 
 .hero-description {
@@ -928,7 +935,7 @@ body {
     2;
 
   max-width:
-    690px;
+    620px;
 
   margin:
     18px 0 28px;
@@ -945,7 +952,7 @@ body {
 
 
 /* =========================================================
-   15. HERO BUTTONS
+   16. HERO BUTTONS
    ========================================================= */
 
 .hero-buttons {
@@ -1062,7 +1069,143 @@ body {
 
 
 /* =========================================================
-   16. PORTAL GRID
+   17. HERO LOGO
+   ========================================================= */
+
+.hero-logos {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  min-width:
+    250px;
+
+  padding:
+    20px 22px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius:
+    18px;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    0 8px 24px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+.hero-logo-item {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  min-width:
+    92px;
+}
+
+
+/* Ghi đè style hình ảnh Markdown */
+
+.markdown-section .hero-logo-item img {
+  display:
+    block;
+
+  width:
+    82px;
+
+  height:
+    82px;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  border-radius:
+    0;
+
+  background:
+    transparent;
+
+  box-shadow:
+    none;
+
+  object-fit:
+    contain;
+}
+
+
+.hero-logo-item span {
+  color:
+    rgba(255, 255, 255, 0.92);
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.3;
+
+  text-align:
+    center;
+
+  white-space:
+    nowrap;
+}
+
+
+.hero-logo-divider {
+  width:
+    1px;
+
+  height:
+    78px;
+
+  background:
+    rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   18. PORTAL GRID
    ========================================================= */
 
 .portal-grid {
@@ -1081,7 +1224,7 @@ body {
 
 
 /* =========================================================
-   17. PORTAL CARD
+   19. PORTAL CARD
    ========================================================= */
 
 .portal-card {
@@ -1200,7 +1343,7 @@ body {
 
 
 /* =========================================================
-   18. BLOCKQUOTE / CALLOUT
+   20. BLOCKQUOTE
    ========================================================= */
 
 .markdown-section blockquote {
@@ -1239,7 +1382,7 @@ body {
 
 
 /* =========================================================
-   19. BẢNG
+   21. BẢNG
    ========================================================= */
 
 .markdown-section table {
@@ -1334,7 +1477,7 @@ body {
 
 
 /* =========================================================
-   20. DANH SÁCH
+   22. DANH SÁCH
    ========================================================= */
 
 .markdown-section ul,
@@ -1360,7 +1503,7 @@ body {
 
 
 /* =========================================================
-   21. HÌNH ẢNH
+   23. HÌNH ẢNH
    ========================================================= */
 
 .markdown-section img {
@@ -1388,7 +1531,7 @@ body {
 
 
 /* =========================================================
-   22. LINK
+   24. LINK
    ========================================================= */
 
 .markdown-section a {
@@ -1407,7 +1550,7 @@ body {
 
 
 /* =========================================================
-   23. CODE
+   25. CODE
    ========================================================= */
 
 .markdown-section pre {
@@ -1432,7 +1575,7 @@ body {
 
 
 /* =========================================================
-   24. ĐƯỜNG KẺ
+   26. HR
    ========================================================= */
 
 .markdown-section hr {
@@ -1451,7 +1594,7 @@ body {
 
 
 /* =========================================================
-   25. GOOGLE FORM / IFRAME
+   27. GOOGLE FORM
    ========================================================= */
 
 .form-wrapper {
@@ -1496,8 +1639,6 @@ body {
 }
 
 
-/* Iframe nói chung */
-
 .markdown-section iframe {
   max-width:
     100%;
@@ -1505,7 +1646,7 @@ body {
 
 
 /* =========================================================
-   26. DARK / LIGHT FLOATING BUTTON
+   28. DARK / LIGHT FLOATING BUTTON
    ========================================================= */
 
 #docsify-darklight-theme {
@@ -1560,8 +1701,7 @@ body {
 
   transition:
     transform 0.18s ease,
-    box-shadow 0.18s ease,
-    background-color 0.18s ease;
+    box-shadow 0.18s ease;
 }
 
 
@@ -1576,7 +1716,7 @@ body {
 
 
 /* =========================================================
-   27. GITHUB CORNER
+   29. GITHUB CORNER
    ========================================================= */
 
 .github-corner {
@@ -1595,7 +1735,7 @@ body {
 
 
 /* =========================================================
-   28. SCROLLBAR SIDEBAR
+   30. SCROLLBAR SIDEBAR
    ========================================================= */
 
 .sidebar::-webkit-scrollbar {
@@ -1624,7 +1764,7 @@ body {
 
 
 /* =========================================================
-   29. KẾT QUẢ TÌM KIẾM
+   31. KẾT QUẢ TÌM KIẾM
    ========================================================= */
 
 .search .results-panel {
@@ -1646,7 +1786,7 @@ body {
 
 
 /* =========================================================
-   30. TABLET
+   32. TABLET
    ========================================================= */
 
 @media screen and (max-width: 900px) {
@@ -1659,14 +1799,50 @@ body {
 
   .hero {
     padding:
-      42px 34px;
+      40px 34px;
+  }
+
+
+  .hero-inner {
+    gap:
+      28px;
+  }
+
+
+  .hero-logos {
+    min-width:
+      205px;
+
+    padding:
+      17px;
+  }
+
+
+  .hero-logo-item {
+    min-width:
+      72px;
+  }
+
+
+  .markdown-section .hero-logo-item img {
+    width:
+      66px;
+
+    height:
+      66px;
+  }
+
+
+  .hero-logo-divider {
+    height:
+      62px;
   }
 
 }
 
 
 /* =========================================================
-   31. MOBILE
+   33. MOBILE
    ========================================================= */
 
 @media screen and (max-width: 768px) {
@@ -1737,10 +1913,64 @@ body {
       30px;
 
     padding:
-      34px 24px;
+      30px 24px;
 
     border-radius:
       14px;
+  }
+
+
+  .hero-inner {
+    display:
+      flex;
+
+    flex-direction:
+      column-reverse;
+
+    align-items:
+      stretch;
+
+    gap:
+      26px;
+  }
+
+
+  .hero-logos {
+    align-self:
+      center;
+
+    min-width:
+      220px;
+
+    padding:
+      14px 18px;
+  }
+
+
+  .markdown-section .hero-logo-item img {
+    width:
+      64px;
+
+    height:
+      64px;
+  }
+
+
+  .hero-logo-item {
+    min-width:
+      70px;
+  }
+
+
+  .hero-logo-divider {
+    height:
+      58px;
+  }
+
+
+  .hero-logo-item span {
+    font-size:
+      11px;
   }
 
 
@@ -1751,6 +1981,9 @@ body {
 
 
   .hero-description {
+    max-width:
+      none;
+
     font-size:
       15.5px;
   }
@@ -1827,7 +2060,7 @@ body {
   }
 
 
-  /* Dark Mode float */
+  /* Dark mode */
 
   #docsify-darklight-theme {
     top:
@@ -1864,7 +2097,7 @@ body {
 
 
 /* =========================================================
-   32. ĐIỆN THOẠI NHỎ
+   34. ĐIỆN THOẠI NHỎ
    ========================================================= */
 
 @media screen and (max-width: 480px) {
@@ -1883,7 +2116,7 @@ body {
 
   .hero {
     padding:
-      30px 20px;
+      26px 20px;
   }
 
 
@@ -1896,6 +2129,39 @@ body {
   .hero-badge {
     font-size:
       11px;
+  }
+
+
+  .hero-logos {
+    min-width:
+      200px;
+
+    gap:
+      13px;
+
+    padding:
+      12px 14px;
+  }
+
+
+  .markdown-section .hero-logo-item img {
+    width:
+      56px;
+
+    height:
+      56px;
+  }
+
+
+  .hero-logo-item {
+    min-width:
+      62px;
+  }
+
+
+  .hero-logo-divider {
+    height:
+      50px;
   }
 
 
