@@ -1,6 +1,12 @@
 /* =========================================================
    CỔNG THÔNG TIN LIÊN ĐỘI
    Trường Tiểu học Phạm Văn Chiêu
+
+   Giao diện:
+   - Hiện đại
+   - Đơn giản
+   - Responsive
+   - Hỗ trợ Light / Dark Mode
    ========================================================= */
 
 
@@ -9,33 +15,36 @@
    ========================================================= */
 
 :root {
-  /* Nhận diện */
+  /* Màu nhận diện */
   --primary-color: var(--accent, #1261a0);
   --primary-dark: #0b4f8a;
   --primary-light: #2584c7;
 
   --secondary-color: #d9363e;
 
-  /* Tự thích nghi Light / Dark Mode */
-  --page-background: var(--background, #f4f7fb);
+  /* Màu tự thay đổi theo Dark / Light Mode */
+  --page-background: var(--background, #f5f7fb);
   --surface: var(--background, #ffffff);
-  --text-main: var(--textColor, #25313c);
+
+  --text-main: var(--textColor, #263238);
   --text-muted: var(--sidebarSublink, #64748b);
+
   --line-color: var(--borderColor, #e2e8f0);
 
-  /* Hiệu ứng */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
+  /* Bo góc */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 18px;
 
-  --shadow-sm:
+  /* Shadow */
+  --shadow-small:
     0 2px 8px rgba(15, 23, 42, 0.05);
 
-  --shadow-md:
+  --shadow-medium:
     0 8px 24px rgba(15, 23, 42, 0.08);
 
   --shadow-hover:
-    0 12px 30px rgba(15, 23, 42, 0.12);
+    0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
 
@@ -49,18 +58,20 @@ html {
 
 
 body {
+  margin: 0;
+
   font-family:
     "Segoe UI",
     Arial,
     sans-serif;
 
-  color: var(--text-main);
-
-  background: var(--page-background);
-
   font-size: 16px;
 
   line-height: 1.7;
+
+  color: var(--text-main);
+
+  background: var(--page-background);
 }
 
 
@@ -76,18 +87,23 @@ body {
 .markdown-section {
   max-width: 1040px;
 
-  margin: 0 auto 60px;
+  margin:
+    0 auto 60px;
 
-  padding: 38px 48px;
+  padding:
+    38px 48px;
 
-  background: var(--surface);
+  background:
+    var(--surface);
 
   border:
     1px solid var(--line-color);
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-large);
 
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    var(--shadow-small);
 }
 
 
@@ -103,24 +119,30 @@ body {
   padding-bottom: 14px;
 
   border-bottom:
-    2px solid var(--line-color);
+    1px solid var(--line-color);
 
-  color: var(--primary-color);
+  color:
+    var(--primary-color);
 
-  font-size: 32px;
+  font-size:
+    32px;
 
-  font-weight: 750;
+  font-weight:
+    750;
 
-  line-height: 1.3;
+  line-height:
+    1.3;
 }
 
+
+/* Gạch đỏ ngắn dưới H1 */
 
 .markdown-section h1::after {
   content: "";
 
   display: block;
 
-  width: 72px;
+  width: 70px;
 
   height: 3px;
 
@@ -128,7 +150,8 @@ body {
 
   border-radius: 99px;
 
-  background: var(--secondary-color);
+  background:
+    var(--secondary-color);
 }
 
 
@@ -137,13 +160,17 @@ body {
 
   margin-bottom: 18px;
 
-  color: var(--primary-color);
+  color:
+    var(--primary-color);
 
-  font-size: 24px;
+  font-size:
+    24px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  line-height: 1.4;
+  line-height:
+    1.4;
 }
 
 
@@ -152,11 +179,14 @@ body {
 
   margin-bottom: 12px;
 
-  color: var(--text-main);
+  color:
+    var(--text-main);
 
-  font-size: 19px;
+  font-size:
+    19px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 }
 
 
@@ -171,70 +201,220 @@ body {
    ========================================================= */
 
 .sidebar {
-  background: var(--surface);
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    var(--surface);
 
   border-right:
     1px solid var(--line-color);
+
+  box-shadow:
+    4px 0 18px
+    rgba(15, 23, 42, 0.04);
 }
 
 
+/* =========================================================
+   6. TÊN WEBSITE TRONG SIDEBAR
+   ========================================================= */
+
 .sidebar > h1 {
+  order: 1;
+
   margin:
-    28px 20px 18px;
+    68px 20px 16px;
+
+  padding:
+    0 5px 18px;
+
+  border-bottom:
+    1px solid var(--line-color);
 
   text-align: left;
 }
 
 
 .app-name-link {
+  display: block;
+
   color:
     var(--primary-color) !important;
 
-  font-size: 20px;
+  font-size:
+    20px;
 
-  font-weight: 750;
+  font-weight:
+    750;
 
-  line-height: 1.35;
+  line-height:
+    1.4;
 
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
 
-.sidebar-nav {
+/* =========================================================
+   7. Ô TÌM KIẾM
+   ========================================================= */
+
+.sidebar .search {
+  order: 2;
+}
+
+
+.search {
   padding:
-    5px 14px 30px;
+    0 18px 18px !important;
+
+  border-bottom:
+    1px solid var(--line-color) !important;
+}
+
+
+.search .input-wrap {
+  margin:
+    0 !important;
+}
+
+
+.search input {
+  width:
+    100% !important;
+
+  height:
+    43px;
+
+  padding:
+    0 13px !important;
+
+  border:
+    1px solid var(--line-color) !important;
+
+  border-radius:
+    10px !important;
+
+  background:
+    var(--surface) !important;
+
+  color:
+    var(--text-main) !important;
+
+  font-family:
+    inherit;
+
+  font-size:
+    14px;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.search input:focus {
+  border-color:
+    var(--primary-color) !important;
+
+  outline:
+    none;
+
+  box-shadow:
+    0 0 0 3px
+    color-mix(
+      in srgb,
+      var(--primary-color) 12%,
+      transparent
+    );
+}
+
+
+.search input::placeholder {
+  color:
+    var(--text-muted);
+
+  opacity:
+    0.8;
+}
+
+
+/* =========================================================
+   8. MENU SIDEBAR
+   ========================================================= */
+
+.sidebar-nav {
+  order: 3;
+
+  flex: 1;
+
+  padding:
+    14px 16px 40px;
 }
 
 
 .sidebar-nav ul {
-  padding-left: 0;
+  margin: 0;
+
+  padding: 0;
 }
 
 
 .sidebar-nav li {
-  margin: 4px 0;
+  margin:
+    4px 0;
+
+  padding: 0;
+
+  list-style:
+    none;
+}
+
+
+/* Loại bỏ dấu - do Darklight Theme tạo */
+
+.sidebar-nav li::before,
+.app-sub-sidebar li::before {
+  display:
+    none !important;
+
+  content:
+    none !important;
 }
 
 
 .sidebar-nav li a {
-  display: block;
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  min-height:
+    43px;
 
   padding:
-    9px 12px;
+    0 14px;
 
   border-radius:
-    var(--radius-sm);
+    9px;
 
   color:
     var(--text-main);
 
-  font-size: 14px;
+  font-size:
+    14px;
 
-  font-weight: 500;
+  font-weight:
+    500;
 
-  line-height: 1.45;
+  line-height:
+    1.45;
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
   transition:
     background 0.18s ease,
@@ -250,7 +430,7 @@ body {
   background:
     color-mix(
       in srgb,
-      var(--primary-color) 9%,
+      var(--primary-color) 8%,
       transparent
     );
 
@@ -270,37 +450,40 @@ body {
       transparent
     );
 
-  font-weight: 700;
+  font-weight:
+    700;
 
   box-shadow:
-    inset 3px 0 0 var(--primary-color);
+    inset 3px 0 0
+    var(--primary-color);
 }
 
 
 /* =========================================================
-   6. Ô TÌM KIẾM
+   9. NÚT ĐÓNG / MỞ SIDEBAR
    ========================================================= */
 
-.search {
+.sidebar-toggle {
+  position:
+    fixed !important;
+
+  top:
+    14px !important;
+
+  bottom:
+    auto !important;
+
+  left:
+    14px !important;
+
+  width:
+    40px !important;
+
+  height:
+    40px !important;
+
   padding:
-    0 14px 12px !important;
-
-  border-bottom:
-    1px solid var(--line-color) !important;
-}
-
-
-.search .input-wrap {
-  margin-top:
-    6px !important;
-}
-
-
-.search input {
-  width: 100% !important;
-
-  padding:
-    10px 12px !important;
+    10px !important;
 
   border:
     1px solid var(--line-color) !important;
@@ -311,39 +494,79 @@ body {
   background:
     var(--surface) !important;
 
-  color:
-    var(--text-main) !important;
+  box-shadow:
+    0 3px 12px
+    rgba(15, 23, 42, 0.08);
 
-  font-family: inherit;
+  cursor:
+    pointer;
 
-  font-size: 14px;
+  opacity:
+    1 !important;
+
+  z-index:
+    9999 !important;
+
+  transition:
+    background 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 
-.search input:focus {
-  border-color:
-    var(--primary-color) !important;
-
-  box-shadow:
-    0 0 0 3px
+.sidebar-toggle:hover {
+  background:
     color-mix(
       in srgb,
-      var(--primary-color) 12%,
-      transparent
-    );
+      var(--primary-color) 8%,
+      var(--surface)
+    ) !important;
 
-  outline: none;
+  box-shadow:
+    0 5px 15px
+    rgba(15, 23, 42, 0.12);
+}
+
+
+.sidebar-toggle-button {
+  width:
+    18px;
+
+  margin:
+    0 auto;
+}
+
+
+.sidebar-toggle span {
+  display:
+    block;
+
+  width:
+    18px !important;
+
+  height:
+    2px !important;
+
+  margin:
+    3px auto !important;
+
+  border-radius:
+    99px;
+
+  background:
+    var(--primary-color) !important;
 }
 
 
 /* =========================================================
-   7. HERO TRANG CHỦ
+   10. HERO TRANG CHỦ
    ========================================================= */
 
 .hero {
-  position: relative;
+  position:
+    relative;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   margin:
     0 0 42px;
@@ -362,7 +585,8 @@ body {
       #247fbd 100%
     );
 
-  color: #ffffff;
+  color:
+    #ffffff;
 
   box-shadow:
     0 16px 36px
@@ -370,20 +594,28 @@ body {
 }
 
 
+/* Họa tiết Hero */
+
 .hero::before {
   content: "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  top: -120px;
+  top:
+    -120px;
 
-  right: -75px;
+  right:
+    -75px;
 
-  width: 280px;
+  width:
+    280px;
 
-  height: 280px;
+  height:
+    280px;
 
-  border-radius: 50%;
+  border-radius:
+    50%;
 
   background:
     rgba(255, 255, 255, 0.08);
@@ -393,33 +625,48 @@ body {
 .hero::after {
   content: "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  right: 120px;
+  right:
+    120px;
 
-  bottom: -135px;
+  bottom:
+    -135px;
 
-  width: 210px;
+  width:
+    210px;
 
-  height: 210px;
+  height:
+    210px;
 
-  border-radius: 50%;
+  border-radius:
+    50%;
 
   background:
     rgba(217, 54, 62, 0.22);
 }
 
 
+/* =========================================================
+   11. NHÃN HERO
+   ========================================================= */
+
 .hero-badge {
-  position: relative;
+  position:
+    relative;
 
-  z-index: 2;
+  z-index:
+    2;
 
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  margin-bottom: 18px;
+  margin-bottom:
+    18px;
 
   padding:
     6px 13px;
@@ -448,20 +695,31 @@ body {
 }
 
 
+/* =========================================================
+   12. TIÊU ĐỀ HERO
+   ========================================================= */
+
 .markdown-section .hero h1 {
-  position: relative;
+  position:
+    relative;
 
-  z-index: 2;
+  z-index:
+    2;
 
-  max-width: 760px;
+  max-width:
+    760px;
 
-  margin: 0;
+  margin:
+    0;
 
-  padding: 0;
+  padding:
+    0;
 
-  border: none;
+  border:
+    none;
 
-  color: #ffffff;
+  color:
+    #ffffff;
 
   font-size:
     clamp(30px, 4vw, 42px);
@@ -475,16 +733,24 @@ body {
 
 
 .markdown-section .hero h1::after {
-  display: none;
+  display:
+    none;
 }
 
 
+/* =========================================================
+   13. MÔ TẢ HERO
+   ========================================================= */
+
 .hero-description {
-  position: relative;
+  position:
+    relative;
 
-  z-index: 2;
+  z-index:
+    2;
 
-  max-width: 690px;
+  max-width:
+    690px;
 
   margin:
     18px 0 28px;
@@ -501,21 +767,27 @@ body {
 
 
 /* =========================================================
-   8. NÚT HERO
+   14. NÚT HERO
    ========================================================= */
 
 .hero-buttons {
-  position: relative;
+  position:
+    relative;
 
-  z-index: 2;
+  z-index:
+    2;
 
-  display: flex;
+  display:
+    flex;
 
-  flex-wrap: wrap;
+  flex-wrap:
+    wrap;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 12px;
+  gap:
+    12px;
 }
 
 
@@ -527,13 +799,17 @@ body {
 
 .btn-primary,
 .btn-secondary {
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  min-height: 42px;
+  min-height:
+    42px;
 
   padding:
     0 19px;
@@ -556,6 +832,8 @@ body {
     background 0.18s ease;
 }
 
+
+/* Nút chính */
 
 .btn-primary {
   background:
@@ -580,6 +858,8 @@ body {
 }
 
 
+/* Nút phụ */
+
 .btn-secondary {
   border:
     1px solid
@@ -603,24 +883,31 @@ body {
 
 
 /* =========================================================
-   9. CARD CHUYÊN MỤC
+   15. LƯỚI CARD CHUYÊN MỤC
    ========================================================= */
 
 .portal-grid {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 18px;
+  gap:
+    18px;
 
   margin:
     24px 0 42px;
 }
 
 
+/* =========================================================
+   16. CARD CHUYÊN MỤC
+   ========================================================= */
+
 .portal-card {
-  display: block;
+  display:
+    block;
 
   padding:
     24px;
@@ -629,7 +916,7 @@ body {
     1px solid var(--line-color);
 
   border-radius:
-    var(--radius-md);
+    var(--radius-medium);
 
   background:
     var(--surface);
@@ -641,7 +928,7 @@ body {
     none !important;
 
   box-shadow:
-    var(--shadow-sm);
+    var(--shadow-small);
 
   transition:
     transform 0.18s ease,
@@ -662,20 +949,29 @@ body {
     );
 
   box-shadow:
-    var(--shadow-md);
+    var(--shadow-medium);
 }
 
 
+/* =========================================================
+   17. ICON CARD
+   ========================================================= */
+
 .portal-icon {
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  width: 42px;
+  width:
+    42px;
 
-  height: 42px;
+  height:
+    42px;
 
   border-radius:
     10px;
@@ -714,7 +1010,8 @@ body {
 
 
 .portal-card p {
-  margin: 0;
+  margin:
+    0;
 
   color:
     var(--text-muted);
@@ -728,7 +1025,7 @@ body {
 
 
 /* =========================================================
-   10. CALLOUT
+   18. CALLOUT / BLOCKQUOTE
    ========================================================= */
 
 .markdown-section blockquote {
@@ -739,11 +1036,14 @@ body {
     16px 18px;
 
   border-left:
-    4px solid var(--secondary-color);
+    4px solid
+    var(--secondary-color);
 
   border-radius:
-    0 var(--radius-sm)
-    var(--radius-sm) 0;
+    0
+    var(--radius-small)
+    var(--radius-small)
+    0;
 
   background:
     color-mix(
@@ -758,34 +1058,42 @@ body {
 
 
 .markdown-section blockquote p {
-  margin: 0;
+  margin:
+    0;
 }
 
 
 /* =========================================================
-   11. BẢNG
+   19. BẢNG
    ========================================================= */
 
 .markdown-section table {
-  display: table;
+  display:
+    table;
 
-  width: 100%;
+  width:
+    100%;
 
   margin:
     22px 0 30px;
 
-  overflow: hidden;
-
-  border-collapse:
-    separate;
-
-  border-spacing: 0;
+  overflow:
+    hidden;
 
   border:
     1px solid var(--line-color);
 
+  border-collapse:
+    separate;
+
+  border-spacing:
+    0;
+
   border-radius:
     10px;
+
+  background:
+    var(--surface);
 }
 
 
@@ -793,7 +1101,8 @@ body {
   padding:
     12px 15px;
 
-  border: none;
+  border:
+    none;
 
   border-bottom:
     1px solid var(--line-color);
@@ -819,7 +1128,8 @@ body {
   padding:
     12px 15px;
 
-  border: none;
+  border:
+    none;
 
   border-bottom:
     1px solid var(--line-color);
@@ -833,12 +1143,25 @@ body {
 
 
 .markdown-section tr:last-child td {
-  border-bottom: none;
+  border-bottom:
+    none;
+}
+
+
+/* Dòng xen kẽ nhẹ */
+
+.markdown-section tbody tr:nth-child(even) {
+  background:
+    color-mix(
+      in srgb,
+      var(--primary-color) 3%,
+      transparent
+    );
 }
 
 
 /* =========================================================
-   12. DANH SÁCH
+   20. DANH SÁCH
    ========================================================= */
 
 .markdown-section ul,
@@ -864,11 +1187,12 @@ body {
 
 
 /* =========================================================
-   13. HÌNH ẢNH
+   21. HÌNH ẢNH
    ========================================================= */
 
 .markdown-section img {
-  display: block;
+  display:
+    block;
 
   max-width:
     100%;
@@ -886,12 +1210,12 @@ body {
     14px;
 
   box-shadow:
-    var(--shadow-md);
+    var(--shadow-medium);
 }
 
 
 /* =========================================================
-   14. LINK
+   22. LIÊN KẾT
    ========================================================= */
 
 .markdown-section a {
@@ -910,7 +1234,7 @@ body {
 
 
 /* =========================================================
-   15. CODE
+   23. KHỐI CODE
    ========================================================= */
 
 .markdown-section pre {
@@ -924,7 +1248,7 @@ body {
     10px;
 
   box-shadow:
-    var(--shadow-sm);
+    var(--shadow-small);
 }
 
 
@@ -935,7 +1259,7 @@ body {
 
 
 /* =========================================================
-   16. ĐƯỜNG KẺ
+   24. ĐƯỜNG KẺ
    ========================================================= */
 
 .markdown-section hr {
@@ -954,21 +1278,27 @@ body {
 
 
 /* =========================================================
-   17. DARK / LIGHT BUTTON
+   25. NÚT DARK / LIGHT MODE
    ========================================================= */
 
 #docsify-darklight-theme {
-  position: fixed !important;
+  position:
+    fixed !important;
 
-  top: 18px !important;
+  top:
+    15px !important;
 
-  right: 20px !important;
+  right:
+    82px !important;
 
-  width: 38px !important;
+  width:
+    40px !important;
 
-  height: 38px !important;
+  height:
+    40px !important;
 
-  padding: 8px !important;
+  padding:
+    9px !important;
 
   border:
     1px solid var(--line-color) !important;
@@ -979,26 +1309,73 @@ body {
   background-color:
     var(--surface) !important;
 
-  background-size:
-    20px 20px !important;
+  background-repeat:
+    no-repeat !important;
 
   background-position:
     center !important;
 
+  background-size:
+    20px 20px !important;
+
   box-shadow:
-    var(--shadow-sm);
+    0 3px 12px
+    rgba(15, 23, 42, 0.08);
+
+  cursor:
+    pointer;
 
   z-index:
-    100;
+    10000 !important;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+#docsify-darklight-theme:hover {
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 6px 16px
+    rgba(15, 23, 42, 0.13);
 }
 
 
 /* =========================================================
-   18. SCROLLBAR SIDEBAR
+   26. GITHUB CORNER
+   ========================================================= */
+
+.github-corner {
+  z-index:
+    9000 !important;
+}
+
+
+.github-corner svg {
+  width:
+    62px !important;
+
+  height:
+    62px !important;
+}
+
+
+/* =========================================================
+   27. SCROLLBAR SIDEBAR
    ========================================================= */
 
 .sidebar::-webkit-scrollbar {
-  width: 5px;
+  width:
+    5px;
+}
+
+
+.sidebar::-webkit-scrollbar-track {
+  background:
+    transparent;
 }
 
 
@@ -1016,7 +1393,29 @@ body {
 
 
 /* =========================================================
-   19. RESPONSIVE TABLET
+   28. KẾT QUẢ TÌM KIẾM
+   ========================================================= */
+
+.search .results-panel {
+  color:
+    var(--text-main);
+}
+
+
+.search .matching-post {
+  color:
+    var(--text-main);
+}
+
+
+.search .search-keyword {
+  color:
+    var(--primary-color) !important;
+}
+
+
+/* =========================================================
+   29. RESPONSIVE TABLET
    ========================================================= */
 
 @media screen and (max-width: 900px) {
@@ -1036,18 +1435,20 @@ body {
 
 
 /* =========================================================
-   20. RESPONSIVE ĐIỆN THOẠI
+   30. RESPONSIVE ĐIỆN THOẠI
    ========================================================= */
 
 @media screen and (max-width: 768px) {
 
   .content {
-    padding-top: 0;
+    padding-top:
+      0;
   }
 
 
   .markdown-section {
-    margin-bottom: 30px;
+    margin-bottom:
+      30px;
 
     padding:
       22px 18px;
@@ -1078,10 +1479,22 @@ body {
   }
 
 
-  .hero {
-    margin-top: 0;
+  /* Sidebar */
 
-    margin-bottom: 30px;
+  .sidebar > h1 {
+    margin-top:
+      65px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    margin-top:
+      0;
+
+    margin-bottom:
+      30px;
 
     padding:
       34px 24px;
@@ -1103,6 +1516,8 @@ body {
   }
 
 
+  /* Hero button */
+
   .hero-buttons {
     flex-direction:
       column;
@@ -1117,6 +1532,8 @@ body {
       center;
   }
 
+
+  /* Card */
 
   .portal-grid {
     grid-template-columns:
@@ -1133,6 +1550,8 @@ body {
   }
 
 
+  /* Bảng */
+
   .markdown-section table {
     display:
       block;
@@ -1145,25 +1564,55 @@ body {
   }
 
 
+  /* Sidebar toggle */
+
+  .sidebar-toggle {
+    top:
+      12px !important;
+
+    left:
+      12px !important;
+
+    width:
+      38px !important;
+
+    height:
+      38px !important;
+  }
+
+
+  /* Dark mode */
+
   #docsify-darklight-theme {
     top:
       12px !important;
 
     right:
-      12px !important;
+      68px !important;
 
     width:
-      36px !important;
+      38px !important;
 
     height:
-      36px !important;
+      38px !important;
+  }
+
+
+  /* Github */
+
+  .github-corner svg {
+    width:
+      54px !important;
+
+    height:
+      54px !important;
   }
 
 }
 
 
 /* =========================================================
-   21. MÀN HÌNH NHỎ
+   31. MÀN HÌNH NHỎ
    ========================================================= */
 
 @media screen and (max-width: 480px) {
@@ -1171,6 +1620,12 @@ body {
   .markdown-section {
     padding:
       18px 15px;
+  }
+
+
+  .markdown-section h1 {
+    font-size:
+      24px;
   }
 
 
@@ -1195,6 +1650,12 @@ body {
   .portal-card h3 {
     font-size:
       17px;
+  }
+
+
+  .sidebar-nav li a {
+    min-height:
+      42px;
   }
 
 }
