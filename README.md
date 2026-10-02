@@ -2,7 +2,6 @@
 <div class="hero-badge">CỔNG THÔNG TIN LIÊN ĐỘI</div>
 <h1>Trường Tiểu học Phạm Văn Chiêu</h1>
 <p class="hero-description">Không gian thông tin, tài liệu và hoạt động phục vụ công tác Đội và phong trào thiếu nhi trong nhà trường.</p>
-<div class="hero-buttons">
 <div class="hero-buttons"><a href="#/hoat-dong-phong-trao" class="btn-primary">Khám phá hoạt động</a><a href="#/cam-nang-nghiep-vu" class="btn-secondary">Cẩm nang nghiệp vụ</a></div>
 </div>
 </div>
