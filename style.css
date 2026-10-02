@@ -86,11 +86,11 @@ body {
    ========================================================= */
 
 /*
-   Darklight Theme mặc định đặt:
-   .content { bottom: 0; }
+   docsify-darklight-theme mặc định có bottom: 0
+   cho .content.
 
-   Điều đó khiến phần nội dung bị ép bằng chiều cao viewport.
-   bottom: auto là phần quan trọng để nội dung có thể dài tự nhiên.
+   bottom: auto giúp chiều cao trang chạy theo nội dung
+   và tạo khoảng trống thực sự ở cuối trang.
 */
 
 .content {
@@ -101,7 +101,7 @@ body {
     100vh;
 
   padding:
-    28px 0 110px;
+    28px 0 120px;
 
   box-sizing:
     border-box;
@@ -166,7 +166,8 @@ body {
 .markdown-section h1::after {
   content: "";
 
-  display: block;
+  display:
+    block;
 
   width:
     70px;
@@ -245,7 +246,8 @@ body {
     1px solid var(--line-color);
 
   box-shadow:
-    4px 0 18px rgba(15, 23, 42, 0.04);
+    4px 0 18px
+    rgba(15, 23, 42, 0.04);
 }
 
 
@@ -355,6 +357,9 @@ body {
   font-size:
     14px !important;
 
+  font-weight:
+    400;
+
   transition:
     border-color 0.18s ease,
     box-shadow 0.18s ease;
@@ -383,7 +388,7 @@ body {
     var(--text-muted);
 
   opacity:
-    0.8;
+    0.78;
 }
 
 
@@ -423,6 +428,8 @@ body {
     none !important;
 }
 
+
+/* Bỏ ký hiệu mặc định của theme */
 
 .sidebar .sidebar-nav li::before,
 .sidebar .sidebar-nav .app-sub-sidebar li::before {
@@ -510,7 +517,7 @@ body {
 }
 
 
-/* Thanh nhấn */
+/* Thanh nhấn bên trái */
 
 .sidebar .sidebar-nav ul li a::before {
   content: "";
@@ -609,7 +616,8 @@ body {
     700 !important;
 
   box-shadow:
-    0 4px 14px rgba(18, 97, 160, 0.07);
+    0 4px 14px
+    rgba(18, 97, 160, 0.07);
 
   text-decoration:
     none !important;
@@ -661,7 +669,8 @@ body {
     var(--surface) !important;
 
   box-shadow:
-    0 3px 12px rgba(15, 23, 42, 0.08);
+    0 3px 12px
+    rgba(15, 23, 42, 0.08);
 
   cursor:
     pointer;
@@ -691,7 +700,8 @@ body {
     ) !important;
 
   box-shadow:
-    0 5px 15px rgba(15, 23, 42, 0.12);
+    0 5px 15px
+    rgba(15, 23, 42, 0.12);
 }
 
 
@@ -757,9 +767,12 @@ body {
     #ffffff;
 
   box-shadow:
-    0 16px 36px rgba(11, 79, 138, 0.18);
+    0 16px 36px
+    rgba(11, 79, 138, 0.18);
 }
 
+
+/* Trang trí Hero */
 
 .hero::before {
   content: "";
@@ -837,7 +850,8 @@ body {
     6px 13px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.3);
+    1px solid
+    rgba(255, 255, 255, 0.3);
 
   border-radius:
     999px;
@@ -1010,7 +1024,8 @@ body {
     #0b5e9d !important;
 
   box-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.08);
+    0 3px 10px
+    rgba(0, 0, 0, 0.08);
 }
 
 
@@ -1019,13 +1034,15 @@ body {
     translateY(-2px);
 
   box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.14);
+    0 8px 18px
+    rgba(0, 0, 0, 0.14);
 }
 
 
 .btn-secondary {
   border:
-    1px solid rgba(255, 255, 255, 0.42);
+    1px solid
+    rgba(255, 255, 255, 0.42);
 
   background:
     rgba(255, 255, 255, 0.1);
@@ -1183,7 +1200,7 @@ body {
 
 
 /* =========================================================
-   18. BLOCKQUOTE
+   18. BLOCKQUOTE / CALLOUT
    ========================================================= */
 
 .markdown-section blockquote {
@@ -1194,7 +1211,8 @@ body {
     16px 18px;
 
   border-left:
-    4px solid var(--secondary-color);
+    4px solid
+    var(--secondary-color);
 
   border-radius:
     0
@@ -1414,7 +1432,7 @@ body {
 
 
 /* =========================================================
-   24. HR
+   24. ĐƯỜNG KẺ
    ========================================================= */
 
 .markdown-section hr {
@@ -1433,7 +1451,61 @@ body {
 
 
 /* =========================================================
-   25. DARK / LIGHT FLOATING BUTTON
+   25. GOOGLE FORM / IFRAME
+   ========================================================= */
+
+.form-wrapper {
+  width:
+    100%;
+
+  margin:
+    24px 0 34px;
+
+  overflow:
+    hidden;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid var(--line-color);
+
+  border-radius:
+    14px;
+
+  background:
+    var(--surface);
+
+  box-shadow:
+    var(--shadow-small);
+}
+
+
+.form-wrapper iframe {
+  display:
+    block;
+
+  width:
+    100%;
+
+  min-height:
+    900px;
+
+  border:
+    none;
+}
+
+
+/* Iframe nói chung */
+
+.markdown-section iframe {
+  max-width:
+    100%;
+}
+
+
+/* =========================================================
+   26. DARK / LIGHT FLOATING BUTTON
    ========================================================= */
 
 #docsify-darklight-theme {
@@ -1477,7 +1549,8 @@ body {
     22px 22px !important;
 
   box-shadow:
-    0 12px 28px rgba(15, 23, 42, 0.18);
+    0 12px 28px
+    rgba(15, 23, 42, 0.18);
 
   cursor:
     pointer;
@@ -1487,7 +1560,8 @@ body {
 
   transition:
     transform 0.18s ease,
-    box-shadow 0.18s ease;
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
 }
 
 
@@ -1496,12 +1570,13 @@ body {
     translateY(-2px);
 
   box-shadow:
-    0 16px 32px rgba(15, 23, 42, 0.22);
+    0 16px 32px
+    rgba(15, 23, 42, 0.22);
 }
 
 
 /* =========================================================
-   26. GITHUB CORNER
+   27. GITHUB CORNER
    ========================================================= */
 
 .github-corner {
@@ -1520,7 +1595,7 @@ body {
 
 
 /* =========================================================
-   27. SCROLLBAR SIDEBAR
+   28. SCROLLBAR SIDEBAR
    ========================================================= */
 
 .sidebar::-webkit-scrollbar {
@@ -1549,7 +1624,7 @@ body {
 
 
 /* =========================================================
-   28. SEARCH RESULT
+   29. KẾT QUẢ TÌM KIẾM
    ========================================================= */
 
 .search .results-panel {
@@ -1571,7 +1646,7 @@ body {
 
 
 /* =========================================================
-   29. TABLET
+   30. TABLET
    ========================================================= */
 
 @media screen and (max-width: 900px) {
@@ -1591,7 +1666,7 @@ body {
 
 
 /* =========================================================
-   30. MOBILE
+   31. MOBILE
    ========================================================= */
 
 @media screen and (max-width: 768px) {
@@ -1604,7 +1679,7 @@ body {
       100vh;
 
     padding:
-      0 0 80px;
+      0 0 90px;
   }
 
 
@@ -1638,6 +1713,8 @@ body {
   }
 
 
+  /* Sidebar */
+
   .sidebar > h1 {
     margin-top:
       65px;
@@ -1652,6 +1729,8 @@ body {
       14.5px !important;
   }
 
+
+  /* Hero */
 
   .hero {
     margin-bottom:
@@ -1692,6 +1771,8 @@ body {
   }
 
 
+  /* Card */
+
   .portal-grid {
     grid-template-columns:
       1fr;
@@ -1707,6 +1788,8 @@ body {
   }
 
 
+  /* Table */
+
   .markdown-section table {
     display:
       block;
@@ -1718,6 +1801,16 @@ body {
       nowrap;
   }
 
+
+  /* Google Form */
+
+  .form-wrapper iframe {
+    min-height:
+      1050px;
+  }
+
+
+  /* Sidebar toggle */
 
   .sidebar-toggle {
     top:
@@ -1733,6 +1826,8 @@ body {
       38px !important;
   }
 
+
+  /* Dark Mode float */
 
   #docsify-darklight-theme {
     top:
@@ -1755,6 +1850,8 @@ body {
   }
 
 
+  /* GitHub */
+
   .github-corner svg {
     width:
       54px !important;
@@ -1767,7 +1864,7 @@ body {
 
 
 /* =========================================================
-   31. ĐIỆN THOẠI NHỎ
+   32. ĐIỆN THOẠI NHỎ
    ========================================================= */
 
 @media screen and (max-width: 480px) {
@@ -1817,6 +1914,15 @@ body {
 
     font-size:
       14px !important;
+  }
+
+
+  .form-wrapper {
+    margin:
+      18px 0 26px;
+
+    border-radius:
+      10px;
   }
 
 
