@@ -4,15 +4,14 @@
 <p class="hero-description">Không gian thông tin, tài liệu và hoạt động phục vụ công tác Đội và phong trào thiếu nhi trong nhà trường.</p>
 <div class="hero-buttons"><a href="#/hoat-dong-phong-trao" class="btn-primary">Khám phá hoạt động</a><a href="#/cam-nang-nghiep-vu" class="btn-secondary">Cẩm nang nghiệp vụ</a></div>
 </div>
-</div>
-
----
 
 ## Giới thiệu
 
-**Cổng thông tin Liên đội Trường Tiểu học Phạm Văn Chiêu** được xây dựng nhằm tập hợp và hệ thống hóa các thông tin, tài liệu và nội dung phục vụ công tác Đội và phong trào thiếu nhi.
+**Cổng thông tin Liên đội Trường Tiểu học Phạm Văn Chiêu** được xây dựng nhằm tập hợp, hệ thống hóa và chia sẻ các thông tin, tài liệu phục vụ công tác Đội và phong trào thiếu nhi trong nhà trường.
 
-Thông qua cổng thông tin, giáo viên, học sinh và các thành viên tham gia công tác Đội có thể thuận tiện tra cứu thông tin, tìm hiểu hoạt động, tham khảo tài liệu nghiệp vụ và gửi ý kiến phản hồi.
+Thông qua Cổng thông tin, học sinh, giáo viên, Ban Chỉ huy Liên đội và các thành viên tham gia công tác Đội có thể thuận tiện tra cứu nội dung, tìm hiểu hoạt động, tham khảo tài liệu nghiệp vụ và gửi ý kiến phản hồi.
+
+> **Mục tiêu:** Xây dựng một không gian thông tin số tập trung, dễ tra cứu, thuận tiện cập nhật và có khả năng tiếp tục mở rộng trong quá trình sử dụng.
 
 ---
 
@@ -22,7 +21,7 @@ Thông qua cổng thông tin, giáo viên, học sinh và các thành viên tham
 <a href="#/gioi-thieu" class="portal-card">
 <div class="portal-icon">01</div>
 <h3>Giới thiệu Liên đội</h3>
-<p>Thông tin chung, tổ chức và định hướng hoạt động của Liên đội.</p>
+<p>Thông tin chung, nhiệm vụ và định hướng hoạt động của Liên đội.</p>
 </a>
 <a href="#/hoat-dong-phong-trao" class="portal-card">
 <div class="portal-icon">02</div>
@@ -32,7 +31,7 @@ Thông qua cổng thông tin, giáo viên, học sinh và các thành viên tham
 <a href="#/cam-nang-nghiep-vu" class="portal-card">
 <div class="portal-icon">03</div>
 <h3>Cẩm nang nghiệp vụ Đội</h3>
-<p>Tra cứu hướng dẫn, quy trình và tài liệu phục vụ công tác Đội.</p>
+<p>Tra cứu hướng dẫn, quy trình và tài liệu hỗ trợ công tác Đội.</p>
 </a>
 <a href="#/lien-he-gop-y" class="portal-card">
 <div class="portal-icon">04</div>
@@ -57,7 +56,7 @@ Cổng thông tin được xây dựng với các mục tiêu:
 
 - Tập trung thông tin và tài liệu phục vụ công tác Liên đội.
 - Hỗ trợ tra cứu tài liệu nhanh chóng và thuận tiện.
-- Giới thiệu các hoạt động, phong trào của Liên đội.
+- Giới thiệu các hoạt động, phong trào tiêu biểu.
 - Hỗ trợ giáo viên và học sinh tiếp cận các nội dung nghiệp vụ Đội.
 - Tạo kênh tiếp nhận ý kiến và phản hồi trực tuyến.
 - Từng bước ứng dụng công nghệ số vào công tác Đội trong nhà trường.
@@ -75,18 +74,26 @@ Cổng thông tin được xây dựng với các mục tiêu:
 
 ---
 
-## Khám phá Cổng thông tin
+## Cách sử dụng
 
-Bạn có thể sử dụng **menu bên trái** để truy cập các chuyên mục hoặc sử dụng **ô tìm kiếm** để nhanh chóng tìm nội dung cần thiết.
+Bạn có thể:
 
-> **Lưu ý:** Cổng thông tin được xây dựng và hoàn thiện từng bước trong quá trình thực hiện đồ án Nhập môn Công nghệ thông tin.
+- Sử dụng **menu bên trái** để truy cập các chuyên mục.
+- Sử dụng **ô tìm kiếm** để tìm nhanh nội dung cần thiết.
+- Sử dụng nút **sáng / tối** ở góc dưới bên phải để thay đổi giao diện.
+- Sử dụng chức năng **Copy Code** tại các khối mã trong Cẩm nang nghiệp vụ.
 
 ---
 
 ## Thông tin dự án
 
-**Tên dự án:** Cổng thông tin Liên đội Trường Tiểu học Phạm Văn Chiêu  
-**Nền tảng:** Docsify  
-**Xuất bản:** GitHub Pages  
-**Định dạng nội dung:** Markdown  
-**Năm thực hiện:** 2026
+| Nội dung | Thông tin |
+|---|---|
+| **Tên dự án** | Cổng thông tin Liên đội Trường Tiểu học Phạm Văn Chiêu |
+| **Nền tảng** | Docsify |
+| **Xuất bản** | GitHub Pages |
+| **Định dạng nội dung** | Markdown |
+| **Quản lý mã nguồn** | GitHub |
+| **Năm thực hiện** | 2026 |
+
+> Cổng thông tin được xây dựng và hoàn thiện từng bước trong quá trình thực hiện đồ án Nhập môn Công nghệ thông tin.
