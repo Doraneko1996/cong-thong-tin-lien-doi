@@ -80,7 +80,11 @@ body {
    ========================================================= */
 
 .content {
-  padding-top: 28px;
+  padding:
+    28px 0 90px;
+
+  box-sizing:
+    border-box;
 }
 
 
@@ -88,7 +92,7 @@ body {
   max-width: 1040px;
 
   margin:
-    0 auto 60px;
+    0 auto;
 
   padding:
     38px 48px;
@@ -1595,8 +1599,8 @@ body {
 @media screen and (max-width: 768px) {
 
   .content {
-    padding-top:
-      0;
+    padding:
+      0 0 70px;
   }
 
 
