@@ -1,29 +1,16 @@
 <div class="hero">
 <div class="hero-inner">
-
 <div class="hero-copy">
 <div class="hero-badge">CỔNG THÔNG TIN LIÊN ĐỘI</div>
 <h1>Trường Tiểu học Phạm Văn Chiêu</h1>
 <p class="hero-description">Không gian thông tin, tài liệu và hoạt động phục vụ công tác Đội và phong trào thiếu nhi trong nhà trường.</p>
 <div class="hero-buttons"><a href="#/hoat-dong-phong-trao" class="btn-primary">Khám phá hoạt động</a><a href="#/cam-nang-nghiep-vu" class="btn-secondary">Cẩm nang nghiệp vụ</a></div>
 </div>
-
 <div class="hero-logos">
-
-<div class="hero-logo-item">
-<img src="assets/images/logo-truong.png" alt="Logo Trường Tiểu học Phạm Văn Chiêu">
-<span>Nhà trường</span>
-</div>
-
+<img class="hero-logo hero-logo-school" src="assets/images/logo-truong.png" alt="Logo Trường Tiểu học Phạm Văn Chiêu">
 <div class="hero-logo-divider"></div>
-
-<div class="hero-logo-item">
-<img src="assets/images/logo-doi.png" alt="Logo Đội TNTP Hồ Chí Minh">
-<span>Liên đội</span>
+<img class="hero-logo hero-logo-doi" src="assets/images/logo-doi.png" alt="Logo Đội TNTP Hồ Chí Minh">
 </div>
-
-</div>
-
 </div>
 </div>
 
@@ -40,31 +27,26 @@ Thông qua Cổng thông tin, học sinh, giáo viên, Ban Chỉ huy Liên độ
 <h2>Các chuyên mục chính</h2>
 
 <div class="portal-grid">
-
 <a href="#/gioi-thieu" class="portal-card">
 <div class="portal-icon">01</div>
 <h3>Giới thiệu Liên đội</h3>
 <p>Thông tin chung, nhiệm vụ và định hướng hoạt động của Liên đội.</p>
 </a>
-
 <a href="#/hoat-dong-phong-trao" class="portal-card">
 <div class="portal-icon">02</div>
 <h3>Hoạt động - Phong trào</h3>
 <p>Theo dõi các chương trình, phong trào và hoạt động tiêu biểu của Liên đội.</p>
 </a>
-
 <a href="#/cam-nang-nghiep-vu" class="portal-card">
 <div class="portal-icon">03</div>
 <h3>Cẩm nang nghiệp vụ Đội</h3>
 <p>Tra cứu hướng dẫn, quy trình và tài liệu hỗ trợ công tác Đội.</p>
 </a>
-
 <a href="#/lien-he-gop-y" class="portal-card">
 <div class="portal-icon">04</div>
 <h3>Liên hệ - Góp ý</h3>
 <p>Gửi ý kiến, đề xuất và phản hồi đến Liên đội thông qua biểu mẫu trực tuyến.</p>
 </a>
-
 </div>
 
 ---
